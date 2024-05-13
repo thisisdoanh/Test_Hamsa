@@ -13,6 +13,7 @@ class IncrementCounterScreen extends GetView<IncrementCounterController> {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
+            //Use Text widget to display number and use Obx to update "number" when the "number" changes
             Obx(
               () => Text(
                 "${controller.number.value}",
@@ -23,6 +24,8 @@ class IncrementCounterScreen extends GetView<IncrementCounterController> {
               ),
             ),
             SizedBox(height: 10.sp),
+
+            //Button
             ElevatedButton(
               onPressed: controller.onPressIncrement,
               child: const Text(
